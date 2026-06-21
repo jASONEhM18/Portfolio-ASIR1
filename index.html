@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio ASIR - Richard Jason</title>
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Consolas', 'Courier New', monospace; /* Tipografía tipo terminal/código */
+            margin: 0;
+            padding: 20px;
+        }
+        
+        /* Contenedor principal usando una tabla gigante en vez de un div */
+        table.contenedor {
+            width: 90%;
+            margin: auto;
+            background-color: #1e293b;
+            border: 2px solid #38bdf8;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .foto-perfil {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 4px double #38bdf8;
+            object-fit: cover;
+        }
+
+        h1 { color: #38bdf8; text-align: center; font-family: Verdana, sans-serif;}
+        h2 { color: #94a3b8; text-align: center; font-family: Verdana, sans-serif;}
+        
+        .habilidad-titulo { color: #22c55e; font-size: 1.2em; font-weight: bold; }
+        
+        /* Tabla anidada para la cuadrícula de asignaturas */
+        table.skills { width: 100%; text-align: left; border-spacing: 15px; }
+        
+        td.skill-card {
+            background-color: #0f172a;
+            padding: 20px;
+            border-left: 4px solid #38bdf8;
+            vertical-align: top;
+            width: 50%;
+        }
+
+        .terminal {
+            background-color: #000;
+            color: #22c55e;
+            padding: 20px;
+            border: 1px solid #333;
+            font-family: monospace;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+<table class="contenedor">
+    
+    <!-- SECCIÓN 1: CABECERA Y FOTO DE PERFIL -->
+    <tr>
+        <td style="text-align: center; padding-bottom: 30px;">
+            <!-- Aquí enlaza tu foto directamente -->
+            <img src="DSC_6352r.jpg" alt="Richard Jason Huaracha Meléndez" class="foto-perfil">
+            
+            <h1>Richard Jason Huaracha Meléndez</h1>
+            <h2>Técnico en Administración de Sistemas Informáticos en Red (ASIR)</h2>
+            
+            <p style="font-family: Verdana, sans-serif; width: 80%; margin: auto; color: #cbd5e1; text-align: justify;">
+                Estudiante del Ciclo Formativo de Grado Superior en ASIR. Este portfolio es un escaparate técnico donde documento mis mejores prácticas, configuraciones y conocimientos adquiridos durante mi primer año. Apasionado por la resolución de problemas IT, la infraestructura de redes y la gestión de servidores.
+            </p>
+        </td>
+    </tr>
+
+    <!-- SECCIÓN 2: TECNOLOGÍAS Y MÓDULOS -->
+    <tr>
+        <td>
+            <h2 style="text-align: left; border-bottom: 1px solid #38bdf8; padding-bottom: 10px; color: white;">Stack Tecnológico y Competencias</h2>
+            
+            <table class="skills">
+                <tr>
+                    <td class="skill-card">
+                        <span class="habilidad-titulo">🌐 HTML / CSS</span>
+                        <p style="font-family: Verdana, sans-serif; font-size: 0.9em; color: #cbd5e1;">Diseño web estructurado, maquetación visual profesional con tablas, estilos CSS adaptativos y despliegue de sitios orientados a la experiencia de usuario.</p>
+                    </td>
+                    <td class="skill-card">
+                        <span class="habilidad-titulo">🖥️ ISO (Sistemas Operativos)</span>
+                        <p style="font-family: Verdana, sans-serif; font-size: 0.9em; color: #cbd5e1;">Implantación y administración de Windows Server y GNU/Linux. Gestión de usuarios, dominios y automatización de tareas.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="skill-card">
+                        <span class="habilidad-titulo">📡 PAR (Redes)</span>
+                        <p style="font-family: Verdana, sans-serif; font-size: 0.9em; color: #cbd5e1;">Diseño de topologías de red, cálculo de subredes, configuración de enrutadores/switches y análisis de protocolos de comunicación.</p>
+                    </td>
+                    <td class="skill-card">
+                        <span class="habilidad-titulo">🔧 FH (Hardware)</span>
+                        <p style="font-family: Verdana, sans-serif; font-size: 0.9em; color: #cbd5e1;">Arquitectura de ordenadores, mantenimiento preventivo, clonación de discos, copias de seguridad y presupuestos de servidores.</p>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+
+    <!-- SECCIÓN 3: TERMINAL / CONSOLA -->
+    <tr>
+        <td style="padding-top: 30px;">
+            <h2 style="text-align: left; border-bottom: 1px solid #38bdf8; padding-bottom: 10px; color: white;">Estado del Sistema</h2>
+            <table style="width: 100%;">
+                <tr>
+                    <td class="terminal">
+                        root@richard-asir:~# systemctl status portfolio.service<br>
+                        <span style="color: white;">● portfolio.service - Portfolio ASIR 1 Richard Jason<br>
+                        &nbsp;&nbsp;&nbsp;Active: <span style="color: #22c55e;">active (running)</span><br></span>
+                        <br>
+                        root@richard-asir:~# ./mostrar_progreso.sh<br>
+                        > Cargando módulos de primer año... [OK]<br>
+                        > Compilando resumen de Lenguajes de Marcas... [OK]<br>
+                        > Sincronizando repositorio en GitHub... [OK]<br>
+                        <br>
+                        root@richard-asir:~# _
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+    
+</table>
+
+</body>
+</html>
