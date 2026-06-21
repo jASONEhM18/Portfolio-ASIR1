@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumen HTML y CSS - Proyecto ASIR</title>
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Estilos para las tablas que actúan como "contenedores" */
+        table.contenedor-principal {
+            width: 90%;
+            margin: auto;
+            border: 4px double #ff0000;
+            background-color: #2b2b2b;
+        }
+
+        table.seccion {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th.cabecera-seccion {
+            background-color: #ff0000;
+            color: white;
+            padding: 15px;
+            font-size: 1.5em;
+            text-decoration: underline;
+            text-align: center;
+            border-bottom: 3px solid white;
+        }
+
+        td.contenido {
+            padding: 20px;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        /* Enlaces */
+        a { color: #00ffff; text-decoration: none; font-weight: bold; }
+        a:hover { color: #ffeb3b; text-decoration: underline; }
+
+        /* Estilos de texto */
+        h1.titulo-web {
+            text-align: center;
+            background-color: #0000ff;
+            color: white;
+            padding: 20px;
+            border: 2px dashed white;
+        }
+
+        mark.destacado {
+            background-color: #ffff00;
+            color: black;
+            font-weight: bold;
+            padding: 2px 5px;
+        }
+
+        /* Formularios */
+        fieldset { border: 2px solid lime; padding: 15px; }
+        legend { background-color: green; color: white; padding: 5px; font-weight: bold; }
+        input[type="text"] {
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"] {
+            background-color: gold;
+            color: black;
+            font-weight: bold;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 class="titulo-web">RESUMEN DE APRENDIZAJE: HTML Y CSS<br><span style="font-size: 0.6em; color: lightgray;">Módulo LMSGI - Richard Jason Huaracha Meléndez</span></h1>
+
+    <table class="contenedor-principal" style="margin-bottom: 30px; border-color: blue;">
+        <tr>
+            <td style="text-align: center; padding: 15px; background-color: #000;">
+                <a href="#tablas">1. Maquetación con Tablas</a> | 
+                <a href="#formularios">2. Formularios Avanzados</a> | 
+                <a href="#multimedia">3. Multimedia e Iframes</a> | 
+                <a href="#css">4. Estilos CSS</a>
+            </td>
+        </tr>
+    </table>
+
+    <table class="contenedor-principal">
+        
+        <tr>
+            <th class="cabecera-seccion"><a id="tablas">1. Maquetación con Tablas (Alternativa a DIV)</a></th>
+        </tr>
+        <tr>
+            <td class="contenido">
+                <p>
+                    A lo largo del curso, he aprendido a estructurar el contenido de una página web sin utilizar la etiqueta <code>&lt;div&gt;</code>. En su lugar, he dominado el uso de la etiqueta <mark class="destacado">&lt;table&gt;</mark> junto con sus filas (<code>&lt;tr&gt;</code>) y celdas (<code>&lt;td&gt;</code> y <code>&lt;th&gt;</code>).
+                </p>
+                <p>
+                    He aplicado atributos como <code>colspan</code> y <code>rowspan</code> para combinar celdas y crear diseños complejos, como menús de navegación laterales o fichas técnicas detalladas de personajes e información.
+                </p>
+                <center>
+                    <table border="2" style="width: 60%; text-align: center; background-color: #444; margin-top: 15px;">
+                        <tr><th colspan="2" style="background-color: #666; padding: 10px;">Ejemplo de Estructura</th></tr>
+                        <tr>
+                            <td style="padding: 10px; border: 1px dashed white;">Celda Izquierda</td>
+                            <td style="padding: 10px; border: 1px dashed white;">Celda Derecha</td>
+                        </tr>
+                    </table>
+                </center>
+            </td>
+        </tr>
+
+        <tr>
+            <th class="cabecera-seccion"><a id="formularios">2. Formularios con Validaciones HTML5</a></th>
+        </tr>
+        <tr>
+            <td class="contenido">
+                <p>
+                    He profundizado en la interacción con el usuario mediante la creación de formularios (<code>&lt;form&gt;</code>) avanzados y seguros. Algunas de las técnicas implementadas son:
+                </p>
+                <ul style="list-style-type: square;">
+                    <li>Uso de <strong>expresiones regulares</strong> (<code>pattern</code>) para validar nombres de usuario y teléfonos.</li>
+                    <li>Creación de listas desplegables predictivas con <code>&lt;datalist&gt;</code> acoplado a un <code>&lt;input&gt;</code>.</li>
+                    <li>Agrupación semántica de la información usando <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code>.</li>
+                    <li>Cálculos en tiempo real combinando controles de rango y etiquetas <code>&lt;output&gt;</code>.</li>
+                </ul>
+                <br>
+                <fieldset style="width: 80%; margin: auto; background-color: #111;">
+                    <legend>Demostración Práctica</legend>
+                    <table style="width: 100%; border: none;">
+                        <tr>
+                            <td style="border: none;"><label>Usuario (minúsculas):</label></td>
+                            <td style="border: none;"><input type="text" pattern="[a-z]+" placeholder="solo letras minúsculas" required></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center; border: none; padding-top: 15px;">
+                                <input type="submit" value="Enviar Datos (Simulación)">
+                            </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </td>
+        </tr>
+
+        <tr>
+            <th class="cabecera-seccion"><a id="multimedia">3. Enlaces Internos, Iframe y Mapas de Imagen</a></th>
+        </tr>
+        <tr>
+            <td class="contenido">
+                <p>
+                    La navegación y la integración de contenido han sido un pilar en mis prácticas. He configurado enlaces internos usando anclas (<code>&lt;a id="ancla"&gt;</code>) para facilitar el salto rápido entre secciones largas del mismo documento.
+                </p>
+                <p>
+                    Además, he integrado ventanas de contenido externo o local mediante <strong>Marcos Flotantes</strong> (<code>&lt;iframe&gt;</code>), permitiendo embeber vídeos de plataformas externas, mapas interactivos o archivos de texto plano sin abandonar la web principal.
+                </p>
+                <p>
+                    A nivel visual avanzado, domino el uso de los <strong>Mapas de Imagen</strong> (<code>&lt;map name="..."&gt;</code>), calculando coordenadas exactas (formas rectangulares, circulares y poligonales) sobre una fotografía para crear múltiples enlaces interactivos en una sola imagen.
+                </p>
+            </td>
+        </tr>
+
+        <tr>
+            <th class="cabecera-seccion"><a id="css">4. Aplicación de Estilos CSS</a></th>
+        </tr>
+        <tr>
+            <td class="contenido">
+                <p>
+                    Finalmente, he enriquecido el HTML puro utilizando <strong>CSS (Hojas de Estilo en Cascada)</strong>. Conozco y aplico las tres formas principales de inserción de estilos:
+                </p>
+                <ol>
+                    <li><strong>En línea:</strong> Mediante el atributo <code>style="..."</code> directamente en las etiquetas.</li>
+                    <li><strong>Interno:</strong> Declarando las reglas dentro de la etiqueta <code>&lt;style&gt;</code> en la cabecera del documento.</li>
+                    <li><strong>Externo:</strong> Vinculando un archivo <code>.css</code> independiente, lo que me ha permitido crear diseños adaptativos diferenciando la vista en pantalla (<code>media="screen"</code>) y la vista de impresión (<code>media="print"</code>).</li>
+                </ol>
+                <p>
+                    Tengo control sobre propiedades de tipografía (alineación, espaciado, capitalización), manipulación de listas (controlando la posición de las viñetas) y la estética general de contenedores e imágenes.
+                </p>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="text-align: center; padding: 20px; background-color: #000; border-top: 3px solid white;">
+                <p><a href="#top">Volver Arriba ⇑</a></p>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
